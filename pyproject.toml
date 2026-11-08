@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "semantic-delta-state-sync"
+version = "0.1.0"
+description = "Incremental JSON state synchronization engine transmitting granular semantic delta operations across agent orchestrators"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+semantic-delta-state-sync = "semantic_delta_state_sync.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["semantic_delta_state_sync*"]
